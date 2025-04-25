@@ -19,12 +19,16 @@ The steps are:
 
 #Algorithm:
 
-arr = [1,2,3,10,100,-2,-100]
-n=len(arr)
-for i in range(n):
-    MinElement=i
-    for j in range(i+1,n):
-        if arr[j]<arr[MinElement]:
-            MinElement=j
-    arr[i],arr[MinElement]=arr[MinElement],arr[i]
-print(*arr)
+def selectionsort(arr):
+    n=len(arr)
+    for i in range(n):
+        MinElement=i
+        for j in range(i+1,n):
+            if arr[j]<arr[MinElement]:
+                MinElement=j
+        arr[i],arr[MinElement]=arr[MinElement],arr[i]
+    print(*arr)
+if __name__=="__main__":
+    arr = [1,2,3,10,100,-2,-200]
+    result=selectionsort(arr)
+
