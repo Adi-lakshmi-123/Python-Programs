@@ -19,7 +19,7 @@ The steps are:
 
 #Algorithm:
 
-arr = [4,9,10,7,2,19,120,110,-1]
+arr = [1,2,3,10,100,-2,-100]
 n=len(arr)
 for i in range(n):
     MinElement=i
