@@ -28,13 +28,12 @@ def randomargs(n):
        arr.append(random.randint(-99999999, 999999999))
     return arr
 def selectionsort(arr):
-    n=len(arr)
-    for i in range(n):
-        MinElement=i
-        for j in range(i+1,n):
-            if arr[j]<arr[MinElement]:
+    for i in range(len(arr)):
+        MinElement = i
+        for j in range(i+1, len(arr)):
+            if arr[j] < arr[MinElement]:
                 MinElement=j
-        arr[i],arr[MinElement]=arr[MinElement],arr[i]
+        arr[i], arr[MinElement] = arr[MinElement], arr[i]
     return arr
 if __name__=="__main__":
     arr1 = randomargs(int(input()))
