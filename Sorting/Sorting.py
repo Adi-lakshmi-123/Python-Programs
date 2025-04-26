@@ -38,5 +38,5 @@ def selectionsort(arr):
     return arr
 if __name__=="__main__":
     arr1 = randomargs(int(input()))
-    res=print(selectionsort(arr1))
+    print(selectionsort(arr1))
 
