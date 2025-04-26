@@ -19,6 +19,14 @@ The steps are:
 
 #Algorithm:
 
+import sys
+import random
+
+def randomargs(n):
+    arr = []
+    for i in range(n):
+       arr.append(random.randint(-99999999, 999999999))
+    return arr
 def selectionsort(arr):
     n=len(arr)
     for i in range(n):
@@ -27,8 +35,8 @@ def selectionsort(arr):
             if arr[j]<arr[MinElement]:
                 MinElement=j
         arr[i],arr[MinElement]=arr[MinElement],arr[i]
-    print(*arr)
+    return arr
 if __name__=="__main__":
-    arr = [1,2,3,10,100,-2,-200]
-    result=selectionsort(arr)
+    arr1 = randomargs(int(input()))
+    res=print(selectionsort(arr1))
 
