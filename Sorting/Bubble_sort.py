@@ -24,7 +24,7 @@ def randomargs(n):
     for i in range(n):
        arr.append(random.randint(-99999999, 999999999))
     return arr
-def insertionsort(arr):
+def bubblesort(arr):
     for i in range(len(arr)-1):
         for j in range(len(arr)-i-1):
             if arr[j] > arr[j+1]:
@@ -34,4 +34,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         print("Pls provide integer on command line")
     lenarr = randomargs(int(sys.argv[1]))
-    print(selectionsort(lenarr))
+    print(bubblesort(lenarr))
