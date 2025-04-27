@@ -37,4 +37,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
        print("Pls provide integer on command line")
     lenarr = randomargs(int(sys.argv[1]))
-    print(selectionsort(lenarr))
+    print(insertionsort(lenarr))
