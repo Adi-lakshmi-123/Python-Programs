@@ -3,7 +3,7 @@ Fibonacci is a series of numbers where the number is the sum of its two preceedi
 Ex: 5;  0 1 1 2 3
 '''
 # Program:
-
+import sys
 def fibonacci(n):
     if n == 0:
         return 0
@@ -11,7 +11,11 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n-1)+fibonacci(n-2)
-n = 7
-for i in range(n):
-    print(fibonacci(i))
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        print("Pls provide integer on command line")
+    else:
+        n=int(sys.argv[1])
+        for i in range(n):
+            print(fibonacci(i))
       
