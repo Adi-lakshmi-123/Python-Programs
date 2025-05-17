@@ -4,18 +4,18 @@ Ex: 5;  0 1 1 2 3
 '''
 # Program:
 import sys
-def fibonacci(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fibonacci(n-1)+fibonacci(n-2)
+def fib(n):
+    arr = [1, 1]
+    if n < len(arr):
+       return arr[n]
+    for j in range(len(arr), n+1):
+        arr.append(arr[j-1] + arr[j-2])
+    return arr[n]
+
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        print("Pls provide integer on command line")
-    else:
-        n=int(sys.argv[1])
-        for i in range(n):
-            print(fibonacci(i))
+    if (len(sys.argv) != 2 ):
+       print("sys.argv[0] integer to run the program")
+       sys.exit(1)
+    print("This is called dynamic programming, faster than recursion")
+    print(fib(int(sys.argv[1])))
       
