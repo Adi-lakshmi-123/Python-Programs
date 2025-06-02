@@ -9,6 +9,7 @@ def write_file():
         with open(filename, 'a') as file:  # appending data to the existing file.
             file.write(data)
             print(f"Successfully wrote to '{filename}'.")
+            file.close()
     except IOError as e:
         print(f"An I/O error occurred: {e}")
 
