@@ -8,6 +8,7 @@ def open_file():
         with open(filename, 'r') as file:
             contents = file.read()
             print(contents)
+            file.close()
     except FileNotFoundError:
         print(f"Error: The file '{filename}' was not found.")
     except IOError as e:
@@ -16,3 +17,4 @@ def open_file():
 if _name_ == "_main_":
     '''calling the function'''
     open_file()
+filename.close()
